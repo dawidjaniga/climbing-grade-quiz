@@ -1,7 +1,14 @@
-export type Grade = ''
-export type Scale = ''
+export type Grade = {
+    id: number,
+    name: string
+}
+export type System = {
+    shortName: string
+    fullName: string
+    grades: Grade[]
+}
 
-const YosemiteDecimalSystem = [
+const YosemiteDecimalSystem: Grade[] = [
     {
         id: 1,
         name: '5.0'
@@ -76,7 +83,7 @@ const YosemiteDecimalSystem = [
     },
 ]
 
-const French = [
+const French: Grade[] = [
     {
         id: 2,
         name: '2'
@@ -140,19 +147,18 @@ const French = [
 ]
 
 export function getSystems() {
-    return [
+    const systems: System[] = [
         {
             shortName: 'yds',
-            fullName: 'YDS'
+            fullName: 'Yosemite Decimal System',
+            grades: YosemiteDecimalSystem
         },
         {
             shortName: 'french',
-            fullName: 'French'
+            fullName: 'French',
+            grades: French
         },
     ]
-}
 
-export const scales = {
-    YosemiteDecimalSystem,
-    French
+    return systems
 }
