@@ -146,6 +146,69 @@ const French: Grade[] = [
     },
 ]
 
+const UIAA: Grade[] = [
+    {
+        id: 2,
+        name: 'II'
+    },
+    {
+        id: 4,
+        name: 'III'
+    },
+    {
+        id: 5,
+        name: 'IV'
+    },
+    {
+        id: 6,
+        name: 'IV+/V-'
+    },
+    {
+        id: 7,
+        name: 'V'
+    },
+    {
+        id: 8,
+        name: 'V+'
+    },
+    {
+        id: 9,
+        name: 'VI-'
+    },
+    {
+        id: 10,
+        name: 'VI'
+    },
+    {
+        id: 11,
+        name: 'VI+'
+    },
+    {
+        id: 12,
+        name: 'VII-'
+    },
+    {
+        id: 13,
+        name: 'VII'
+    },
+    {
+        id: 14,
+        name: 'VII+'
+    },
+    {
+        id: 16,
+        name: 'VIII-'
+    },
+    {
+        id: 17,
+        name: 'VIII-'
+    },
+    {
+        id: 18,
+        name: 'VIII'
+    },
+]
+
 export function getSystems() {
     const systems: System[] = [
         {
@@ -157,6 +220,11 @@ export function getSystems() {
             shortName: 'french',
             fullName: 'French',
             grades: French
+        },
+        {
+            shortName: 'uiaa',
+            fullName: 'UIAA',
+            grades: UIAA
         },
     ]
 

@@ -40,9 +40,10 @@ export default function Learn() {
     const [firstGrade, setFirstGrade] = useState<Grade>()
     const [secondSystem, setSecondSystem] = useState<System>()
     const [secondGrades, setSecondGrades] = useState<Grade[]>()
-    const [answeredGradeId, setAnsweredGradeId] = useState(0)
+    const [answeredGradeId, setAnsweredGradeId] = useState<number>(-1)
+    const [status, setStatus] = useState<'success' | 'error' | 'idle'>('idle')
 
-    useEffect(() => {
+    function selectNextSystemsAndGrades() {
         const first = getRandomSystem()
         const randomFirstGrade = sample(first.grades)!
         const second = getRandomSystem(first)
@@ -59,6 +60,10 @@ export default function Learn() {
         setFirstGrade(randomFirstGrade)
         setSecondSystem(second)
         setSecondGrades(secondGrades)
+    }
+
+    useEffect(() => {
+        selectNextSystemsAndGrades()
     }, [])
 
     const onAnswer = (val: string | number) => {
@@ -69,12 +74,18 @@ export default function Learn() {
 
     function onCheck() {
         if (answeredGradeId === firstGrade?.id) {
-            console.log('correct answer')
-            // add to 
+            setStatus('success')
         } else {
+            setStatus('error')
 
-            console.log('inccorrect answer')
         }
+
+        setTimeout(() => {
+            setAnsweredGradeId(-1)
+            setStatus('idle')
+            selectNextSystemsAndGrades()
+
+        }, 3000)
     }
 
     return (
@@ -117,16 +128,22 @@ export default function Learn() {
 
                                             </Grid>
 
-                                            <Button type="success" onClick={onCheck}>Check</Button>
+                                            <Button type="success" onClick={onCheck} disabled={answeredGradeId === -1}>Check</Button>
                                         </>
                                     } />
                                 </Card>
+                            </Grid>
+                            <Grid xs={24} justify='center'>
+                                {status === 'success' && <Card type='success'><Text h4>Correct!</Text></Card>}
+                                {status === 'error' && <Card type='error'><Text h4>Sorry</Text><Text>The correct answer is {secondGrades?.find(grade => grade.id === firstGrade.id)?.name}</Text></Card>}
                             </Grid>
 
 
 
                         </> : <Loading />
                     }
+
+
                 </Grid.Container>
             </Page>
         </div>
