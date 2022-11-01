@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Badge, Button, ButtonDropdown, Card, Description, Grid, Link, Loading, Page, Progress, Radio, Spacer, Table, Text } from '@geist-ui/core'
 import { getSystems, Grade, System } from '../../quiz/freeClimbing'
+//@ts-ignore
 import hex from 'text-hex'
 import styles from './style.module.css'
 import React, { useEffect, useState } from 'react'
