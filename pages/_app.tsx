@@ -1,10 +1,10 @@
-import { GeistProvider, CssBaseline } from '@geist-ui/core'
-import '../styles/globals.css'
+import { CssBaseline, GeistProvider } from '@geist-ui/core'
 import type { AppProps } from 'next/app'
+import '../styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <GeistProvider>
+    <GeistProvider themeType='dark'>
       <CssBaseline />
       <Component {...pageProps} />
     </GeistProvider>
