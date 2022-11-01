@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import { Button, Page, Text } from '@geist-ui/core'
 
 export default function Index() {
     return (
@@ -9,7 +9,10 @@ export default function Index() {
                 <meta name="description" content="Learn" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <h1>Learn</h1>
+            <Page>
+                <Text h1>Learn</Text>
+                <Button>Submit</Button>
+            </Page>
         </div>
 
     )
