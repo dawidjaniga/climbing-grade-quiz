@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Button, Card, Description, Grid, Link, Page, Table, Text } from '@geist-ui/core'
 import { getSystems } from '../../quiz/freeClimbing'
+import Header from 'components/header'
 
 export default function Quiz() {
     return (
@@ -10,6 +11,7 @@ export default function Quiz() {
                 <meta name="description" content="Quiz" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <Header />
             <Page>
                 <Grid.Container gap={2}>
                     <Grid xs={24}>

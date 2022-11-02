@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Button, ButtonDropdown, Card, Description, Grid, Link, Page, Table, Text } from '@geist-ui/core'
 import { getSystems } from '../../quiz/freeClimbing'
 import styles from './style.module.css'
+import Header from 'components/header'
 
 const data = [
     { yds: '5.1', french: '2' },
@@ -21,6 +22,7 @@ export default function Index() {
                 <meta name="description" content="Learn" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <Header />
             <Page>
                 <Grid.Container gap={2}>
                     <Grid xs={24}>

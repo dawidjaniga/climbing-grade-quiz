@@ -6,6 +6,7 @@ import hex from 'text-hex'
 import styles from './style.module.css'
 import React, { useEffect, useState } from 'react'
 import { random, sample, sampleSize } from 'lodash'
+import Header from 'components/header'
 
 const data = [
     { yds: '5.1', french: '2' },
@@ -96,6 +97,7 @@ export default function Learn() {
                 <meta name="description" content="Learn" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <Header />
             <Page>
                 {/* <Progress type="success" value={45} /> */}
 
