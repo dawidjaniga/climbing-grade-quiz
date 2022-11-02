@@ -7,6 +7,9 @@ export default function Header() {
         <Grid.Container justify="center">
             <Grid xs={12}>
                 <div className={styles.wrapper}>
+                    <NextLink href='/'>
+                        Home
+                    </NextLink>
                     <NextLink href='/learn'>
                         Learn
                     </NextLink>
