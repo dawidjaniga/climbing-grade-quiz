@@ -3,14 +3,14 @@
     width: 100%;
 }
 
-.wrapper a {
+.link {
     color: inherit;
     margin: 1rem;
     display: inline-block;
     position: relative;
 }
 
-.wrapper a::after {
+.link::after {
     content: '';
     position: absolute;
     background: transparent;
@@ -24,11 +24,15 @@
     margin: auto;
 }
 
-.wrapper a:hover {
+.link:hover {
     color: #fff;
 }
 
-.wrapper a:hover::after {
+.link:hover::after {
     width: 100%;
     background: #fff;
+}
+
+.activeLink {
+    color: #fff;
 }

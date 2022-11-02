@@ -1,5 +1,5 @@
-import { Grid, Link } from "@geist-ui/core";
-import NextLink from "next/link";
+import { Grid } from "@geist-ui/core";
+import ActiveLink from "./activeLink";
 import styles from './styles.module.css'
 
 export default function Header() {
@@ -7,19 +7,22 @@ export default function Header() {
         <Grid.Container justify="center">
             <Grid xs={12}>
                 <div className={styles.wrapper}>
-                    <NextLink href='/'>
-                        Home
-                    </NextLink>
-                    <NextLink href='/learn'>
-                        Learn
-                    </NextLink>
-                    <NextLink href='/learn/table'>
-                        Table
-                    </NextLink>
-                    <NextLink href='/quiz'>
-                        Quiz
-                    </NextLink>
+                    <ActiveLink href='/' activeClassName={styles.activeLink}>
+                        <a className={styles.link}>Home</a>
+                    </ActiveLink>
 
+                    <ActiveLink href='/learn' activeClassName={styles.activeLink}>
+                        <a className={styles.link}>Learn</a>
+                    </ActiveLink>
+
+                    <ActiveLink href='/learn/table' activeClassName={styles.activeLink}>
+                        <a className={styles.link}>Table</a>
+                    </ActiveLink>
+
+                    <ActiveLink href='/quiz' activeClassName={styles.activeLink}>
+                        <a className={styles.link}>Quiz
+                        </a>
+                    </ActiveLink>
                 </div>
             </Grid>
         </Grid.Container>
