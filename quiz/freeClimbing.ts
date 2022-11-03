@@ -81,6 +81,70 @@ const YosemiteDecimalSystem: Grade[] = [
         id: 18,
         name: '5.11d'
     },
+    {
+        id: 19,
+        name: '5.12a'
+    },
+    {
+        id: 20,
+        name: '5.12b'
+    },
+    {
+        id: 21,
+        name: '5.12c'
+    },
+    {
+        id: 22,
+        name: '5.12d'
+    },
+    {
+        id: 23,
+        name: '5.13a'
+    },
+    {
+        id: 24,
+        name: '5.13b'
+    },
+    {
+        id: 25,
+        name: '5.13c'
+    },
+    {
+        id: 26,
+        name: '5.13d'
+    },
+    {
+        id: 27,
+        name: '5.14a'
+    },
+    {
+        id: 28,
+        name: '5.14b'
+    },
+    {
+        id: 29,
+        name: '5.14c'
+    },
+    {
+        id: 30,
+        name: '5.14d'
+    },
+    {
+        id: 31,
+        name: '5.15a'
+    },
+    {
+        id: 32,
+        name: '5.15b'
+    },
+    {
+        id: 33,
+        name: '5.15c'
+    },
+    {
+        id: 34,
+        name: '5.15d'
+    },
 ]
 
 const French: Grade[] = [
