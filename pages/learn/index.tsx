@@ -1,26 +1,11 @@
 import Head from 'next/head'
-import { Badge, Button, ButtonDropdown, Card, Description, Grid, Link, Loading, Page, Progress, Radio, Spacer, Table, Text } from '@geist-ui/core'
+import { Button, Card, Description, Grid, Loading, Page, Radio, Spacer, Text } from '@geist-ui/core'
 import { getSystems, Grade, System } from '../../quiz/freeClimbing'
-//@ts-ignore
-import hex from 'text-hex'
-import styles from './style.module.css'
 import React, { useEffect, useState } from 'react'
-import { random, sample, sampleSize } from 'lodash'
+import { sample, sampleSize } from 'lodash'
 import Header from 'components/header'
+import { ColoredBadge } from '../../components/ColoredBadge'
 
-const data = [
-    { yds: '5.1', french: '2' },
-    { yds: '5.2', french: '3' },
-]
-
-const rowColorByIndex: Record<number, string> = {
-    0: styles.yellow,
-    1: styles.green,
-}
-
-function ColoredBadge({ children }: React.PropsWithChildren<{}>) {
-    return <Badge style={{ backgroundColor: hex(children) }}>{children}</Badge>
-}
 
 function getRandomSystem(excludeSystem?: System): System {
     const systems = getSystems()
