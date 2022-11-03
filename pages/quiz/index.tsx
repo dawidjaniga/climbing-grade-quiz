@@ -79,6 +79,7 @@ export default function Quiz() {
 
     function onReset() {
         setQuestionNumber(1)
+        setCorrectAnswers(0)
         setStatus('answering')
     }
 
