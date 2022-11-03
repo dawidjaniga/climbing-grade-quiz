@@ -335,6 +335,54 @@ const UIAA: Grade[] = [
         id: 18,
         name: 'VIII'
     },
+    {
+        id: 19,
+        name: 'VIII+'
+    },
+    {
+        id: 21,
+        name: 'IX-'
+    },
+    {
+        id: 22,
+        name: 'IX'
+    },
+    {
+        id: 23,
+        name: 'IX+'
+    },
+    {
+        id: 25,
+        name: 'X-'
+    },
+    {
+        id: 26,
+        name: 'X'
+    },
+    {
+        id: 27,
+        name: 'X+'
+    },
+    {
+        id: 29,
+        name: 'XI-'
+    },
+    {
+        id: 30,
+        name: 'XI'
+    },
+    {
+        id: 31,
+        name: 'XI+'
+    },
+    {
+        id: 33,
+        name: 'XII-'
+    },
+    {
+        id: 34,
+        name: 'XII'
+    },
 ]
 
 export function getSystems() {
