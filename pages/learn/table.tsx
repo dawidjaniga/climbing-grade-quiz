@@ -4,15 +4,43 @@ import { getSystems } from '../../quiz/freeClimbing'
 import styles from './style.module.css'
 import Header from 'components/header'
 
-const data = [
-    { yds: '5.1', french: '2' },
-    { yds: '5.2', french: '3' },
-]
-
-const rowColorByIndex: Record<number, string> = {
-    0: styles.yellow,
-    1: styles.green,
+type GradeRow = {
+    [index: string]: string
 }
+
+const systems = getSystems()
+const gradesData: Array<GradeRow> = []
+
+systems.map(system => {
+    system.grades.map(grade => {
+        if (!gradesData[grade.id]) {
+            gradesData[grade.id] = {}
+        }
+
+        gradesData[grade.id][system.shortName] = grade.name
+    })
+})
+
+function getRowColorByNumber(rowNumber: number): string {
+    if (rowNumber <= 10) {
+        return styles.red
+    } else if (rowNumber <= 14) {
+        return styles.purple
+    } else if (rowNumber <= 18) {
+        return styles.green
+    } else if (rowNumber <= 22) {
+        return styles.orange
+    } else if (rowNumber <= 26) {
+        return styles.violet
+    } else if (rowNumber <= 30) {
+        return styles.blue
+    } else if (rowNumber <= 34) {
+        return styles.yellow
+    }
+
+    return ''
+}
+
 
 export default function Index() {
     return (
@@ -26,15 +54,12 @@ export default function Index() {
             <Page>
                 <Grid.Container gap={2}>
                     <Grid xs={24}>
-                        <Text h1>Learn</Text>
-                    </Grid>
-                    <Grid xs={24}>
-                        <Text h2>Free climbing</Text>
+                        <Text h1>Clibing Grades Table</Text>
                     </Grid>
 
                     <Grid xs={24}>
-                        <Table data={data} rowClassName={(_data, rowIndex) => rowColorByIndex[rowIndex]}>
-                            {getSystems().map(({ shortName, fullName }) => <Table.Column prop={shortName} label={fullName} />)}
+                        <Table data={gradesData} rowClassName={(_data, rowIndex) => getRowColorByNumber(rowIndex)} className={styles.table}>
+                            {systems.map(({ shortName, fullName }) => <Table.Column prop={shortName} label={fullName} />)}
                         </Table>
                     </Grid>
                     <Grid xs={24}>

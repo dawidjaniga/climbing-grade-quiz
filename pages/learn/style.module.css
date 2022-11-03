@@ -1,7 +1,31 @@
-.yellow {
-    background: yellow;
+.table {
+    table-layout: fixed;
+}
+
+.red {
+    background: #361a1a;
+}
+
+.purple {
+    background: #4e154e;
 }
 
 .green {
-    background: green;
+    background: #071707;
+}
+
+.orange {
+    background: orange;
+}
+
+.violet {
+    background: violet;
+}
+
+.blue {
+    background: blue;
+}
+
+.yellow {
+    background: yellow;
 }
