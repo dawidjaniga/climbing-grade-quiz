@@ -44,7 +44,7 @@ export default function Home() {
             <p>Check your knowledge and know your score.</p>
           </Link>
 
-          <Link href='/table' className={styles.card}>
+          <Link href='/learn/table' className={styles.card}>
             <h2>Table &rarr;</h2>
             <p>Improve your understanding by in-depth study of all climbing scales.</p>
           </Link>
