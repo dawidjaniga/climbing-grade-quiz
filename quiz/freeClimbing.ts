@@ -208,6 +208,70 @@ const French: Grade[] = [
         id: 18,
         name: '7a'
     },
+    {
+        id: 19,
+        name: '7a+'
+    },
+    {
+        id: 20,
+        name: '7b'
+    },
+    {
+        id: 21,
+        name: '7b+'
+    },
+    {
+        id: 22,
+        name: '7c'
+    },
+    {
+        id: 23,
+        name: '7c+'
+    },
+    {
+        id: 24,
+        name: '8a'
+    },
+    {
+        id: 25,
+        name: '8a+'
+    },
+    {
+        id: 26,
+        name: '8b'
+    },
+    {
+        id: 27,
+        name: '8b+'
+    },
+    {
+        id: 28,
+        name: '8c'
+    },
+    {
+        id: 29,
+        name: '8c+'
+    },
+    {
+        id: 30,
+        name: '9a'
+    },
+    {
+        id: 31,
+        name: '9a+'
+    },
+    {
+        id: 32,
+        name: '9b'
+    },
+    {
+        id: 33,
+        name: '9b+'
+    },
+    {
+        id: 34,
+        name: '9c'
+    },
 ]
 
 const UIAA: Grade[] = [
