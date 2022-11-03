@@ -23,6 +23,10 @@ export default function Header() {
                         <a className={styles.link}>Quiz
                         </a>
                     </ActiveLink>
+
+                    <ActiveLink href='/about' activeClassName={styles.activeLink}>
+                        <a className={styles.link}>About</a>
+                    </ActiveLink>
                 </div>
             </Grid>
         </Grid.Container>
