@@ -84,7 +84,10 @@ export default function Learn() {
             </Head>
             <Header />
             <Page>
-                {/* <Progress type="success" value={45} /> */}
+
+                <Grid xs={24}>
+                    <Text h1>Learn</Text>
+                </Grid>
 
                 <Grid.Container gap={2}>
                     {firstSystem && firstGrade ?

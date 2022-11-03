@@ -1,4 +1,4 @@
-import { Grid, Page, Spacer, Tag, Text } from '@geist-ui/core'
+import { Grid, Link, Page, Spacer, Text } from '@geist-ui/core'
 import Header from 'components/header'
 import Head from 'next/head'
 
@@ -35,12 +35,12 @@ export default function About() {
 
           <Grid xs={12}>
             <Text>
-              I'm open to feedback. If you have any suggestions or questions drop me a message to <Tag type="lite">dawidjaniga@gmail.com</Tag>
+              I'm open to feedback. If you have any suggestions or questions drop me a message to <Link href="mailto:dawidjaniga@gmail.com" color underline>dawidjaniga@gmail.com</Link>
             </Text>
           </Grid>
 
           <Grid xs={12} justify='flex-end'>
-            <Tag>Dawid</Tag>
+            <Text i>Dawid</Text>
           </Grid>
         </Grid.Container>
       </Page>
